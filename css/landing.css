@@ -5,7 +5,8 @@ main {
   justify-content: center;
   align-items: center;
   min-height: 768px;
-  /* background: radial-gradient(#a20ae6, #590979); */
+  background: radial-gradient(#a20ae6, #590979);
+  z-index: -10;
 }
 
 .landing {
@@ -54,4 +55,5 @@ main {
 #headshot {
   border-radius: 50%;
   box-shadow: 0 0 8px 4px rgba(219, 209, 209, 0.2);
+  z-index: 10;
 }

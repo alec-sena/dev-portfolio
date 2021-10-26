@@ -1,8 +1,9 @@
 canvas {
   position: absolute;
-  z-index: -1;
+  /* z-index: -1; */
   /* max-height: 100vh; */
-  background: radial-gradient(#a20ae6, #590979);
+  /* background: radial-gradient(#a20ae6, #590979); */
+  background: rgba(0, 0, 0, 0);
   top: 0;
   left: 0;
 }

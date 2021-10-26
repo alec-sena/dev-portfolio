@@ -6,7 +6,6 @@ const rect = canvas.parentNode.getBoundingClientRect();
 const resizeCanvas = () => {
   /* canvas.height = window.screen.height; //window.innerHeight;
   canvas.width = window.screen.width; //window.innerWidth; */
-  
   canvas.width = rect.width;
   canvas.height = rect.height;
 } 
@@ -75,18 +74,31 @@ const drawLines = (particles) => {
       ctx.lineTo(particles[y].x, particles[y].y);
       let distance = Math.hypot(particles[y].x - particles[x].x, particles[y].y - particles[x].y);
     
-      /* if (distance <= 100) {
-        let opacity = (100 - distance) * 0.01;
-        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`
-      } else {
-      	ctx.strokeStyle = `rgba(255, 255, 255, 0)`;
-      } */
-      if (distance <= 200) {
+      /*  */
+      /* if (distance <= 200) {
         let opacity = (100 - (distance/2)) * 0.01;
         ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`
       } else {
       	ctx.strokeStyle = `rgba(255, 255, 255, 0)`;
+      } */
+
+      // change stroke length based on screen size
+      if(canvas.width < 1000){
+        if (distance <= 100) {
+          let opacity = (100 - distance) * 0.01;
+          ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`
+        } else {
+          ctx.strokeStyle = `rgba(255, 255, 255, 0)`;
+        }
+      } else {
+        if (distance <= 200) {
+          let opacity = (100 - (distance/2)) * 0.01;
+          ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`
+        } else {
+          ctx.strokeStyle = `rgba(255, 255, 255, 0)`;
+        }
       }
+
       ctx.stroke();
     }
   }
