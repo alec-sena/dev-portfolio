@@ -4,6 +4,13 @@
 
 #work-samples h2 {
   margin: 2rem auto;
+  font-size: 40px;
+}
+
+#work-samples h3 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .work-samples__grid {
@@ -16,7 +23,7 @@
 }
 
 .work-samples__card {
-  height: 530px;
+  height: 540px;
 }
 
 .work-samples__background {
@@ -25,6 +32,7 @@
   background-size: cover;
   background-position: center;
   box-shadow: 3px 3px 2px 1px rgb(199, 199, 199);
+  border: 1px solid rgb(229, 229, 229);
 }
 
 #weather-app {
@@ -33,6 +41,14 @@
 
 #loop-studios-landing {
   background-image: url("../images/loop-studios.png");
+}
+
+#tip-calculator {
+  background-image: url("../images/tip-calculator.png");
+}
+
+#time-tracking-dashboard {
+  background-image: url("../images/time-tracking-dashboard.png");
 }
 
 .work-samples__link {
@@ -44,6 +60,7 @@
   justify-content: flex-end;
   color: rgba(0, 0, 0, 0);
   font-size: 2rem;
+  text-decoration: none;
 }
 
 .work-samples__link:hover,
@@ -61,5 +78,9 @@
   .work-samples__grid {
     grid-template-columns: 1fr 1fr;
     width: 80%;
+  }
+
+  .work-samples h2 {
+    font-size: 32px;
   }
 }
