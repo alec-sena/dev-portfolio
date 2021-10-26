@@ -1,12 +1,15 @@
 main {
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 768px;
+  /* background: radial-gradient(#a20ae6, #590979); */
 }
 
 .landing {
-  margin-top: 10rem;
+  margin-top: 6rem;
 }
 
 .landing__title {
@@ -17,6 +20,11 @@ main {
   font-size: 24px;
   width: 15ch;
   max-width: 90%;
+}
+
+.landing__title,
+.landing__text {
+  margin-top: 1rem;
 }
 
 .landing__cta {
@@ -34,10 +42,11 @@ main {
 
 .landing__links {
   width: 10ch;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .landing__links i {
-  margin-top: 1rem;
   color: white;
   font-size: 32px;
 }

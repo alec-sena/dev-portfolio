@@ -1,0 +1,15 @@
+#work-samples {
+  background: white;
+}
+
+.work-samples__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 90%;
+}
+
+.work-samples__card {
+  width: 100%;
+  background-image: url("../images/weather-app.png");
+  background-size: cover;
+}

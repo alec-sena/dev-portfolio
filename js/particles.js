@@ -1,10 +1,15 @@
 const canvas = document.querySelector(".js-canvas");
 const ctx = canvas.getContext("2d");
+// const main = document.getElementById("js-main");
+const rect = canvas.parentNode.getBoundingClientRect();
 
 const resizeCanvas = () => {
-  canvas.height = window.innerHeight;
-  canvas.width = window.innerWidth;
-}
+  /* canvas.height = window.screen.height; //window.innerHeight;
+  canvas.width = window.screen.width; //window.innerWidth; */
+  
+  canvas.width = rect.width;
+  canvas.height = rect.height;
+} 
 
 resizeCanvas();
 
@@ -50,7 +55,8 @@ let nums = [];
 const init = (numParticles) => {
   for (let x = 0; x < numParticles; x++) {
 
-    particles.push(new Particle(getRandomNum(window.innerWidth), getRandomNum(window.innerHeight), getRandomNum(3), getRandomNum(3)));
+    //particles.push(new Particle(getRandomNum(window.innerWidth), getRandomNum(window.innerHeight), getRandomNum(3), getRandomNum(3)));
+    particles.push(new Particle(getRandomNum(canvas.width), getRandomNum(canvas.height), getRandomNum(3), getRandomNum(3)));
     nums = [];
   }
 }
@@ -68,8 +74,15 @@ const drawLines = (particles) => {
       ctx.moveTo(particles[x].x, particles[x].y);
       ctx.lineTo(particles[y].x, particles[y].y);
       let distance = Math.hypot(particles[y].x - particles[x].x, particles[y].y - particles[x].y);
-      if (distance <= 100) {
+    
+      /* if (distance <= 100) {
         let opacity = (100 - distance) * 0.01;
+        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`
+      } else {
+      	ctx.strokeStyle = `rgba(255, 255, 255, 0)`;
+      } */
+      if (distance <= 200) {
+        let opacity = (100 - (distance/2)) * 0.01;
         ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`
       } else {
       	ctx.strokeStyle = `rgba(255, 255, 255, 0)`;
