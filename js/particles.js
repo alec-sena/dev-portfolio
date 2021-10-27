@@ -47,20 +47,19 @@ class Particle {
   }
 }
 
-const particles = [];
+let particles = [];
 
-let nums = [];
-
-const init = (numParticles) => {
+const reset = (numParticles) => {
+  particles = [];
   for (let x = 0; x < numParticles; x++) {
 
     //particles.push(new Particle(getRandomNum(window.innerWidth), getRandomNum(window.innerHeight), getRandomNum(3), getRandomNum(3)));
     particles.push(new Particle(getRandomNum(canvas.width), getRandomNum(canvas.height), getRandomNum(3), getRandomNum(3)));
-    nums = [];
   }
 }
 
-init(50);
+reset(40);
+
 
 
 
