@@ -91,6 +91,11 @@
   padding: 0.4rem;
 }
 
+.card__read-more {
+  visibility: hidden;
+  display: none;
+}
+
 #see-more {
   font-size: 24px;
   color: black;
