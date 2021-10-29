@@ -1,11 +1,8 @@
 const canvas = document.querySelector(".js-canvas");
 const ctx = canvas.getContext("2d");
-// const main = document.getElementById("js-main");
 const rect = canvas.parentNode.getBoundingClientRect();
 
 const resizeCanvas = () => {
-  /* canvas.height = window.screen.height; //window.innerHeight;
-  canvas.width = window.screen.width; //window.innerWidth; */
   canvas.width = rect.width;
   canvas.height = rect.height;
 } 
@@ -52,8 +49,6 @@ let particles = [];
 const reset = (numParticles) => {
   particles = [];
   for (let x = 0; x < numParticles; x++) {
-
-    //particles.push(new Particle(getRandomNum(window.innerWidth), getRandomNum(window.innerHeight), getRandomNum(3), getRandomNum(3)));
     particles.push(new Particle(getRandomNum(canvas.width), getRandomNum(canvas.height), getRandomNum(1.25), getRandomNum(1.25)));
   }
 }
@@ -73,14 +68,6 @@ const drawLines = (particles) => {
       ctx.lineTo(particles[y].x, particles[y].y);
       let distance = Math.hypot(particles[y].x - particles[x].x, particles[y].y - particles[x].y);
     
-      /*  */
-      /* if (distance <= 200) {
-        let opacity = (100 - (distance/2)) * 0.01;
-        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`
-      } else {
-      	ctx.strokeStyle = `rgba(255, 255, 255, 0)`;
-      } */
-
       // change stroke length based on screen size
       if(canvas.width < 1000){
         if (distance <= 100) {

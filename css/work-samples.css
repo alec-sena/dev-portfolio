@@ -44,11 +44,14 @@
 }
 
 #loop-studios-landing {
-  background-image: url("../images/loop-studios.png");
+  background-image: url("../images/loop-studios.jpg");
+  background-position: top;
 }
 
 #tip-calculator {
-  background-image: url("../images/tip-calculator.png");
+  background-image: url("../images/tip-calculator-mobile.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #time-tracking-dashboard {
@@ -102,5 +105,13 @@
 
   .work-samples h2 {
     font-size: 32px;
+  }
+
+  #loop-studios-landing {
+    background-position: center;
+  }
+
+  #tip-calculator {
+    background-image: url("../images/tip-calculator.png");
   }
 }
