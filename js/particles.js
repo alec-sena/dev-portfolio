@@ -54,7 +54,7 @@ const reset = (numParticles) => {
   for (let x = 0; x < numParticles; x++) {
 
     //particles.push(new Particle(getRandomNum(window.innerWidth), getRandomNum(window.innerHeight), getRandomNum(3), getRandomNum(3)));
-    particles.push(new Particle(getRandomNum(canvas.width), getRandomNum(canvas.height), getRandomNum(3), getRandomNum(3)));
+    particles.push(new Particle(getRandomNum(canvas.width), getRandomNum(canvas.height), getRandomNum(1.25), getRandomNum(1.25)));
   }
 }
 
