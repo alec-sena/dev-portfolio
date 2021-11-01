@@ -56,6 +56,7 @@
 
 #memory-game {
   background-image: url("../images/memory-game-mobile.png");
+  background-position: center;
 }
 
 .work-samples__link {
