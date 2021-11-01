@@ -54,8 +54,8 @@
   background-repeat: no-repeat;
 }
 
-#time-tracking-dashboard {
-  background-image: url("../images/time-tracking-dashboard.png");
+#memory-game {
+  background-image: url("../images/memory-game-mobile.png");
 }
 
 .work-samples__link {
@@ -118,5 +118,9 @@
 
   #tip-calculator {
     background-image: url("../images/tip-calculator.png");
+  }
+
+  #memory-game {
+    background-image: url("../images/memory-game.png");
   }
 }
