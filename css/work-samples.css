@@ -92,6 +92,11 @@
   padding: 0.4rem;
 }
 
+.card__link {
+  margin-left: 0.4rem;
+  font-size: 1.1rem;
+}
+
 .card__read-more {
   visibility: hidden;
   display: none;
