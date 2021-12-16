@@ -43,8 +43,14 @@
   background-image: url("../images/weather-app.png");
 }
 
+#e-commerce {
+  background-image: url("../images/e-commerce-mobile.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 #loop-studios-landing {
-  background-image: url("../images/loop-studios.jpg");
+  background-image: url("../images/loop-studios-mobile.jpg");
   background-position: top;
 }
 
@@ -118,7 +124,14 @@
     font-size: 32px;
   }
 
+  #e-commerce {
+    background-image: url("../images/e-commerce-product-landing-page.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
   #loop-studios-landing {
+    background-image: url("../images/loop-studios.png");
     background-position: center;
   }
 
